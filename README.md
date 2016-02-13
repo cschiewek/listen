@@ -1,5 +1,7 @@
 # Listen
 
+[![Build Status](https://semaphoreci.com/api/v1/cschiewek/listen/branches/master/shields_badge.svg)](https://semaphoreci.com/cschiewek/listen)
+
 Listen provides an API endpoint to which you can send audio (URL or file), which it then broadcasts over a websocket.  That's it.
 
 Demo: https://listen.schiewek.com
