@@ -1,0 +1,5 @@
+/* Phoenix flash messages */
+.alert:empty { display: none; }
+
+/* pad the top */
+body { padding-top: 50px; }

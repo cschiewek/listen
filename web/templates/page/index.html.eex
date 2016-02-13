@@ -1,0 +1,33 @@
+<div class="jumbotron">
+  <h1>Welcome to Listen!</h1>
+
+  <h2>Now Playing</h2>
+  <p id="nothing"><em>Nothing.  Sorry!</em></p>
+  <p id="now-playing"></p>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Play URL</h3>
+  </div>
+  <div class="panel-body">
+    <pre>curl --data "url=http://www.vorbis.com/music/Epoq-Lepidoptera.ogg" <%= play_url(@conn, :play) %></pre>
+    <div class="form-group">
+      <%= text_input :play, :url, class: "form-control", placeholder: "http://www.vorbis.com/music/Epoq-Lepidoptera.ogg", data: [api_url: play_path(@conn, :play)] %>
+    </div>
+    <button id="play-url" class="btn btn-primary">Play</button>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Play File</h3>
+  </div>
+  <div class="panel-body">
+    <pre>curl --form "file=@Epoq-Lepidoptera.ogg;type=audio/ogg" <%= play_url(@conn, :play) %></pre>
+    <div class="form-group">
+      <%= file_input :play, :file, class: "form-control", data: [api_url: play_path(@conn, :play)] %>
+    </div>
+    <button id="play-file" class="btn btn-primary">Play</button>
+  </div>
+</div>
