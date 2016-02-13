@@ -4,7 +4,7 @@
 
 Listen provides an API endpoint to which you can send audio (URL or file), which it then broadcasts over a websocket.  That's it.
 
-Demo: https://listen.schiewek.com
+Demo: http://listen.schiewek.com
 
 To start locally app:
 
